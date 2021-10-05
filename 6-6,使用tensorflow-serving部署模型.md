@@ -1,7 +1,5 @@
 # 6-6,使用tensorflow-serving部署模型
 
-
-
 TensorFlow训练好的模型以tensorflow原生方式保存成protobuf文件后可以用许多方式部署运行。
 
 例如：通过 tensorflow-js 可以用javascrip脚本加载模型并在浏览器中运行模型。
@@ -231,13 +229,13 @@ docker pull tensorflow/serving
 可以使用任何编程语言的http功能发送请求，下面示范linux的 curl 命令发送请求，以及Python的requests库发送请求。
 
 ```python
-!curl -d '{"instances": [1.0, 2.0, 5.0]}' \
+!curl -d '{"instances": [[1.0, 2.0], [5.0,7.0]]}' \
     -X POST http://localhost:8501/v1/models/linear_model:predict
 ```
 
 ```
 {
-    "predictions": [[3.06546211], [5.01313448]
+    "predictions": [[3.06546211], [6.02843142]
     ]
 }
 ```
@@ -261,9 +259,11 @@ print(predictions)
 
 ```
 
-如果对本书内容理解上有需要进一步和作者交流的地方，欢迎在公众号"Python与算法之美"下留言。作者时间和精力有限，会酌情予以回复。
+如果对本书内容理解上有需要进一步和作者交流的地方，欢迎在公众号"算法美食屋"下留言。作者时间和精力有限，会酌情予以回复。
 
-![image.png](./data/Python与算法之美logo.jpg)
+也可以在公众号后台回复关键字：**加群**，加入读者交流群和大家讨论。
+
+![算法美食屋二维码.jpg](./data/算法美食屋二维码.jpg)
 
 ```python
 

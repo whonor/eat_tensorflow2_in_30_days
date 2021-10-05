@@ -1,7 +1,5 @@
 # 六、TensorFlow的高阶API
 
-
-
 TensorFlow的高阶API主要是tensorflow.keras.models.
 
 本章我们主要详细介绍tensorflow.keras.models相关的以下内容。
@@ -13,6 +11,8 @@ TensorFlow的高阶API主要是tensorflow.keras.models.
 * 模型的部署（tensorflow serving部署模型、使用spark(scala)调用tensorflow模型）
 
 
-如果对本书内容理解上有需要进一步和作者交流的地方，欢迎在公众号"Python与算法之美"下留言。作者时间和精力有限，会酌情予以回复。
+如果对本书内容理解上有需要进一步和作者交流的地方，欢迎在公众号"算法美食屋"下留言。作者时间和精力有限，会酌情予以回复。
 
-![image.png](./data/Python与算法之美logo.jpg)
+也可以在公众号后台回复关键字：**加群**，加入读者交流群和大家讨论。
+
+![image.png](./data/算法美食屋二维码.jpg)

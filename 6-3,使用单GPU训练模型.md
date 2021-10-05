@@ -1,7 +1,5 @@
 # 6-3,使用单GPU训练模型
 
-
-
 深度学习的训练过程常常非常耗时，一个模型训练几个小时是家常便饭，训练几天也是常有的事情，有时候甚至要训练几十天。
 
 训练过程的耗时主要来自于两个部分，一部分来自数据准备，另一部分来自参数迭代。
@@ -32,13 +30,15 @@ https://colab.research.google.com/drive/1r5dLoeJq5z01sU72BX2M5UiNSkuxsEFe
 %tensorflow_version 2.x
 import tensorflow as tf
 print(tf.__version__)
+```
+
+```python
 from tensorflow.keras import * 
 
 #打印时间分割线
 @tf.function
 def printbar():
-    ts = tf.timestamp()
-    today_ts = ts%(24*60*60)
+    today_ts = tf.timestamp()%(24*60*60)
 
     hour = tf.cast(today_ts//3600+8,tf.int32)%tf.constant(24)
     minite = tf.cast((today_ts%3600)//60,tf.int32)
@@ -52,8 +52,7 @@ def printbar():
     
     timestring = tf.strings.join([timeformat(hour),timeformat(minite),
                 timeformat(second)],separator = ":")
-    tf.print("=========="*8,end = "")
-    tf.print(timestring)
+    tf.print("=========="*8+timestring)
     
 ```
 
@@ -285,6 +284,8 @@ Epoch=10,Loss:0.263130337,Accuracy:0.936651051,Valid Loss:3.09705234,Valid Accur
 
 ```
 
-如果对本书内容理解上有需要进一步和作者交流的地方，欢迎在公众号"Python与算法之美"下留言。作者时间和精力有限，会酌情予以回复。
+如果对本书内容理解上有需要进一步和作者交流的地方，欢迎在公众号"算法美食屋"下留言。作者时间和精力有限，会酌情予以回复。
 
-![image.png](./data/Python与算法之美logo.jpg)
+也可以在公众号后台回复关键字：**加群**，加入读者交流群和大家讨论。
+
+![算法美食屋二维码.jpg](./data/算法美食屋二维码.jpg)
